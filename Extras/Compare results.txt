@@ -1,0 +1,67 @@
+Comparing single-stage and five-stage processor results:
+
+First, l;et me summarize the performance based on Cycles, CPI (Cycles Per Instruction), and IPC (Instructions Per Cycle).
+
+ Test Case 1:
+- Single Stage:
+  - Cycles: 6
+  - Instructions: 5
+  - CPI: 1.2
+  - IPC: 0.833
+
+- Five Stage:
+  - Cycles: 10
+  - Instructions: 5
+  - CPI: 2.0
+  - IPC: 0.5
+
+ Test Case 2:
+- Single Stage:
+  - Cycles: 40
+  - Instructions: 39
+  - CPI: 1.0256
+  - IPC: 0.975
+
+- Five Stage:
+  - Cycles: 46
+  - Instructions: 39
+  - CPI: 1.1795
+  - IPC: 0.8478
+
+Test Case 3:
+- Single Stage:
+  - Cycles: 7
+  - Instructions: 6
+  - CPI: 1.1667
+  - IPC: 0.8571
+
+- Five Stage:
+  - Cycles: 10
+  - Instructions: 6
+  - CPI: 1.6667
+  - IPC: 0.6
+
+Comparison and Analysis:
+
+Cycles:
+
+- Single Stage consistently shows a lesser number of cycles across all test cases compared to the five-stage processor. This tells us that the single-stage processor is quicker in completing the instruction set for these specific test cases.
+
+CPI (Cycles Per Instruction):
+- The Single Stage has a lower CPI in all test cases. A lower CPI means: that each instruction takes fewer cycles to complete, which is more efficient. 
+This effieincy in the single-stage processor is due to the lack of overhead associated with managing pipeline stages.
+
+IPC (Instructions Per Cycle):
+- Again, the Single Stage has a higher IPC across all test cases, meaning it processes more instructions per cycle on average compared to the five-stage pipeline. 
+This might be reflective of the simpler control logic and absence of inter-stage communication delays that are inevitable in pipelined processors.
+
+
+The performance of the five-stage pipeline processor is generally expected to improve with increased instruction count and more complex programs. However, for the short instruction sequences and simpler control structures as shown in the test cases given to us, the overhead of managing pipeline stages might not overcome the benefits. 
+
+
+OVERALL:
+
+In the test cases with fewer instructions, the five-stage pipeline's benefits are less pronounced due to the overhead of managing multiple pipeline stages. Pipelining aims to improve throughput by processing multiple instructions simultaneously across different stages. However, with fewer instructions, the pipeline often isn't fully utilized and that leads to inefficiencies. Stages may sit idle, waiting for new instructions or handling hazards and dependencies, which negates the potential throughput gains.
+ Therefore, in these short scenarios, the simpler single-stage processor outperforms the five-stage pipeline by avoiding these complexities and better leveraging its resources, resulting in lower CPI and higher IPC.
+
+
