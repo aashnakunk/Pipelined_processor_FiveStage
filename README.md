@@ -5,6 +5,9 @@ This code implements a 5 stage as well as a single stage (one instruction per cy
 This handles the following instructions:
 
 <img width="424" alt="Screenshot 2024-05-21 at 10 18 53 AM" src="https://github.com/aashnakunk/Pipelined_processor_FiveStage/assets/58456702/6c7332f0-ee27-497d-8021-a68b7f52eab9">
+
+
+
 <img width="429" alt="Screenshot 2024-05-21 at 10 19 04 AM" src="https://github.com/aashnakunk/Pipelined_processor_FiveStage/assets/58456702/c9c51217-9aaa-4c4b-87f3-2d61acd0e9d1">
 
 1. you need to have your instruction and data memory files in the directory where your code is.
