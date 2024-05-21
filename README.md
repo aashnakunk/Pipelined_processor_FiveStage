@@ -1,4 +1,4 @@
-#Five stage RISC-V Processor Simulator
+*Five stage RISC-V Processor Simulator*
 
 This code implements a 5 stage as well as a single stage (one instruction per cycle) RISC-V processor and outputs (modifies the respective files) the state result of the register files, their contents, and the contents of the instruction memory and 
 
