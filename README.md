@@ -18,6 +18,32 @@ This handles the following instructions:
 6. Both instruction and data memory are in the big-endian format
 7. Remember that register x0's value cannot be changed, it's always zero
 
+To improve performance, the following optimization features can be added:
+
+
+Our processor already handles RAW and control flow hazards. Apart from that, to decrease the number of cycles, I can think of the following techniques can be implemented into the processor: 
+
+ 1.  Predicting branches dynamically - 
+
+currently, the processor assumes branches are not taken. Integrating a dynamic branch prediction mechanism could significantly improve performance. Techniques such as a branch target buffer can dynamically predict branch outcomes based on past data, reducing the frequency and penalty of branch mispredictions.
+
+2. we can execute instructions Out-of-Order - 
+
+Implementing out-of-order execution can help reduce stalls due to hazards by allowing the processor to execute instructions as their operands become available, rather than strictly sticking to program order. 
+This requires a more complex control logic and resource management but can greatly increase throughput! 
+
+4. Speculative Execution -
+
+Alongside dynamic branch prediction, speculative execution can be implemented where the processor continues to execute instructions following a branch before the branch decision is known. This is combined with mechanisms to rollback changes if the speculation was incorrect, requiring careful management of state and resources.
+
+ 5. We can improve the forwarding logic -
+
+While I have implemented basic forwarding from EX-ID and MEM-ID, further optimization can be achieved by refining this logic to minimize the cases where stalling is necessary. 
+This may include adding more forwarding paths, or optimizing the decision logic for when to forward.
+
+-- end -- 
+
+
 Create your imem & dmem files using this instruction encoding : 
 
 <img width="416" alt="Screenshot 2024-05-21 at 10 24 14 AM" src="https://github.com/aashnakunk/Pipelined_processor_FiveStage/assets/58456702/1ecdf32a-dc12-4cc6-9ccd-8ec58dced62d">
