@@ -16,6 +16,13 @@ This handles the following instructions:
 6. Both instruction and data memory are in the big-endian format
 7. Remember that register x0's value cannot be changed, it's always zero
 
+
+Create your imem & dmem files using this instruction encoding : 
+
+<img width="416" alt="Screenshot 2024-05-21 at 10 24 14 AM" src="https://github.com/aashnakunk/Pipelined_processor_FiveStage/assets/58456702/1ecdf32a-dc12-4cc6-9ccd-8ec58dced62d">
+
+
+
 To improve performance, the following optimization features can be added:
 
 
@@ -40,10 +47,5 @@ While I have implemented basic forwarding from EX-ID and MEM-ID, further optimiz
 This may include adding more forwarding paths, or optimizing the decision logic for when to forward.
 
 -- end -- 
-
-
-Create your imem & dmem files using this instruction encoding : 
-
-<img width="416" alt="Screenshot 2024-05-21 at 10 24 14 AM" src="https://github.com/aashnakunk/Pipelined_processor_FiveStage/assets/58456702/1ecdf32a-dc12-4cc6-9ccd-8ec58dced62d">
 
 
